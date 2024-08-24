@@ -2,13 +2,14 @@
 
 body {
     font-family: 'Orbitron', sans-serif;
-    background: radial-gradient(circle at center, #0d1117, #010409);
-    color: #c9d1d9;
+    background: radial-gradient(circle at center, #0A162D, #030b14);
+    color: #d3e3f3;
     display: flex;
     flex-direction: column;
     align-items: center;
     position: relative;
     z-index: 0;
+    overflow: hidden;
 }
 
 body::before {
@@ -18,26 +19,32 @@ body::before {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, rgba(0, 212, 255, 0.2) 0%, rgba(9, 9, 121, 0.2) 35%, rgba(2, 0, 36, 0.2) 100%);
+    background: linear-gradient(135deg, rgba(15, 28, 41, 0.3) 0%, rgba(10, 22, 45, 0.3) 35%, rgba(5, 10, 22, 0.3) 100%);
     z-index: -1;
+    animation: moveGradient 10s ease infinite;
 }
+
+@keyframes moveGradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
 
 .header-content {
     display: flex;
-    justify-content: space-between;
+    align-items: center;
     width: 100%;
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.05);
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.7);
+    justify-content: space-between;
 }
 
 .logo-image {
     max-width: 150px;
-    filter: brightness(0) invert(1);
 }
 
 .nav-buttons a {
-    color: #c9d1d9;
+    font-family: Arial, sans-serif;
+    color: #d3e3f3;
     text-transform: uppercase;
     margin: 0 15px;
     font-size: 14px;
@@ -45,7 +52,7 @@ body::before {
 }
 
 .nav-buttons a:hover {
-    color: #58a6ff;
+    color: #7999B6;
 }
 
 .main-title {
@@ -55,10 +62,21 @@ body::before {
     font-weight: 700;
     letter-spacing: 3px;
     text-transform: uppercase;
-    background: -webkit-linear-gradient(#58a6ff, #8b949e);
+    background: -webkit-linear-gradient(#d3e3f3, #e0e9f4);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
 }
+
+.pricing-card h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    font-weight: 600;
+    color: #d3e3f3;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
 
 .intro-section {
     text-align: center;
@@ -68,20 +86,19 @@ body::before {
 .intro-section h2 {
     font-size: 36px;
     margin-bottom: 15px;
-    color: #58a6ff;
+    color: #d3e3f3;
 }
 
-.intro-section p {
-    font-size: 18px;
-    margin-bottom: 10px;
-    color: #8b949e;
+.intro-section {
+    text-align: center;
+    margin: 100px 0 20px;
 }
 
 .separator {
     width: 60%;
     height: 2px;
-    background-color: #30363d;
-    margin: 30px 0;
+    background-color: #7999B6;
+    margin: 30px auto;
 }
 
 .pricing-table {
@@ -89,14 +106,15 @@ body::before {
     flex-wrap: wrap;
     gap: 30px;
     justify-content: center;
-    padding: 0 20px;
+    padding: 0 20px 55px;
+    max-width: 1200px;
 }
 
 .pricing-card {
-    background-color: #161b22;
+    background-color: #162436;
     padding: 25px;
     border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+    box-shadow: 7px 7px 15px #0e1a2a, -7px -7px 15px #1c2e48;
     text-align: center;
     width: 320px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -104,35 +122,28 @@ body::before {
 
 .pricing-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.9);
+    box-shadow: 14px 14px 30px #0e1a2a, -14px -14px 30px #1c2e48;
 }
 
-.pricing-card h2 {
-    font-size: 28px;
-    margin-bottom: 20px;
-    font-weight: 600;
-    color: #58a6ff;
-    text-transform: uppercase;
-}
 
 .pricing-card .price {
     font-size: 40px;
     margin-bottom: 15px;
     font-weight: 700;
     color: #ffffff;
-    background: -webkit-linear-gradient(#ff7b72, #f85149);
+    background: -webkit-linear-gradient(#d3e3f3, #e0e9f4);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 .pricing-card .price span {
     font-size: 18px;
-    color: #8b949e;
+    color: #b9c8db;
 }
 
 .pricing-card .annual-price {
     font-size: 20px;
-    color: #8b949e;
+    color: #b9c8db;
     margin-bottom: 10px;
 }
 
@@ -143,7 +154,7 @@ body::before {
 }
 
 .pricing-card button {
-    background-color: #238636;
+    background-color: #1E4D72;
     color: #ffffff;
     border: none;
     padding: 12px 25px;
@@ -151,12 +162,16 @@ body::before {
     cursor: pointer;
     font-size: 16px;
     margin-bottom: 25px;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
 }
 
 .pricing-card button:hover {
-    background-color: #2ea043;
+    background-color: #2C648B;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
 }
+
 
 .pricing-card ul {
     list-style: none;
@@ -167,7 +182,7 @@ body::before {
 .pricing-card ul li {
     font-size: 16px;
     margin: 12px 0;
-    color: #c9d1d9;
+    color: #d3e3f3;
     position: relative;
     padding-left: 20px;
 }
@@ -177,23 +192,64 @@ body::before {
     font-family: 'FontAwesome';
     position: absolute;
     left: 0;
-    color: #58a6ff;
+    color: #d3e3f3;
     font-size: 14px;
+    transition: color 0.3s ease;
 }
 
+.pricing-card ul li:hover::before {
+    color: #7999B6;
+}
+
+.pricing-card:nth-child(1) .price {
+    background: radial-gradient(circle, #CD7F32 0%, #8C6239 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0 0 15px rgba(205, 127, 50, 0.8);
+}
+
+.pricing-card:nth-child(2) .price {
+    background: linear-gradient(45deg, #C0C0C0 0%, #B0B0B0 50%, #C0C0C0 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0 0 10px rgba(192, 192, 192, 0.6);
+}
+
+.pricing-card:nth-child(3) .price {
+    background: linear-gradient(45deg, #FFD700 0%, #FFA500 50%, #FFD700 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0 0 15px rgba(255, 215, 0, 0.8);
+}
+
+.pricing-card:nth-child(1) h2 {
+    font-size: 36px;
+}
+.pricing-card:nth-child(2) h2 {
+    font-size: 39px;
+}
+.pricing-card:nth-child(3) h2 {
+    font-size: 43px;
+}
+
+
+
 .footer {
-    background-color: #010409;
+    background-color: #030b14;
     padding: 20px;
     width: 100%;
     text-align: center;
 }
 
 .footer-links a, .footer-social a {
-    color: #8b949e;
+    color: #b9c8db;
     margin: 0 10px;
     transition: color 0.3s ease;
 }
 
 .footer-links a:hover, .footer-social a:hover {
-    color: #58a6ff;
+    color: #d3e3f3;
 }
