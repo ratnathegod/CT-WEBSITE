@@ -1,18 +1,18 @@
 # **CT Website**
 
 ## **Overview**
-Welcome to the **CT Website** repository! This project is a modern and responsive web application designed to beautifully showcase product pricing, features, and community feedback. Key highlights include a dynamic header, sleek image sliders, and a well-structured pricing page.
+Welcome to the **CT Website** repository! This project is a sleek, responsive web application designed to elegantly display product pricing, features, and community feedback. Key highlights include a dynamic header, smooth image sliders, and a well-organized pricing page.
 
 ## **Project Structure**
 
 ### **HTML Files**
 - **`index.html`**: The main landing page of the website.
-- **`pricing.html`**: A dedicated page detailing various subscription plans.
+- **`pricing.html`**: A dedicated page outlining various subscription plans.
 
 ### **CSS Files**
-- **`style.css`**: The primary stylesheet for the website, covering layout, design, typography, and the styling of the header, footer, and sliders.
+- **`style.css`**: The core stylesheet, handling layout, design, typography, and the styling of the header, footer, and sliders.
 - **`price.css`**: Specialized styles for the pricing page, focusing on the layout and design of pricing cards.
-- **`sanitize.css`**: A modern CSS reset to ensure consistency across different browsers.
+- **`sanitize.css`**: A modern CSS reset to ensure cross-browser consistency.
 
 ### **JavaScript Files**
 - **`header.js`**: Manages the dynamic behavior of the header, including background color transitions and visibility on scroll.
@@ -36,3 +36,4 @@ Welcome to the **CT Website** repository! This project is a modern and responsiv
 
 ### **Prerequisites**
 - A modern web browser (e.g., Chrome, Firefox, Safari, etc.)
+
