@@ -38,7 +38,7 @@ body::before {
 
 .nav-buttons a {
     color: #c9d1d9;
-    text-transform: uppercase;
+    text-transform:  percase;
     margin: 0 15px;
     font-size: 14px;
     transition: color 0.3s ease;
